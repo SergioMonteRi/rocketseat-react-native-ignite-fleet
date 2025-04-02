@@ -3,9 +3,9 @@
 import { StatusBar } from 'react-native'
 import { ThemeProvider } from 'styled-components/native'
 import {
-  Roboto_400Regular,
-  Roboto_700Bold,
   useFonts,
+  Roboto_700Bold,
+  Roboto_400Regular,
 } from '@expo-google-fonts/roboto'
 
 import { SignIn } from '@screens/SignIn'

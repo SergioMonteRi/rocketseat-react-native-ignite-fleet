@@ -9,7 +9,8 @@ import {
   Roboto_400Regular,
 } from '@expo-google-fonts/roboto'
 
-import { Home } from '@screens/Home'
+import { Routes } from 'src/routes/index'
+
 import { SignIn } from '@screens/SignIn'
 
 import { Loading } from '@components/Loading'
@@ -38,7 +39,7 @@ export default function App() {
           translucent
         />
         <UserProvider fallback={SignIn}>
-          <Home />
+          <Routes />
         </UserProvider>
       </ThemeProvider>
     </AppProvider>

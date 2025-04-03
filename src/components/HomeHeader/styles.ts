@@ -1,10 +1,10 @@
 import { Image } from 'expo-image'
 import styled from 'styled-components/native'
 
-export const HomeHeaderContainer = styled.View`
+export const HomeHeaderContainer = styled.View<{ statusBarHeight: number }>`
   width: 100%;
   padding: 32px;
-  padding-top: 48px;
+  padding-top: ${({ statusBarHeight }) => statusBarHeight + 32}px;
 
   flex-direction: row;
   align-items: center;

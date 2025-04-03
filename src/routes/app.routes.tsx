@@ -12,8 +12,8 @@ export const AppRoutes = () => {
         headerShown: false,
       }}
     >
-      <Screen name="Home" component={Home} />
-      <Screen name="SignIn" component={SignIn} />
+      <Screen name="home" component={Home} />
+      <Screen name="signIn" component={SignIn} />
     </Navigator>
   )
 }

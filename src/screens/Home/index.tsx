@@ -1,11 +1,11 @@
-import { Text } from 'react-native'
+import { HomeHeader } from '@components/HomeHeader'
 
 import { HomeContainer } from './styles'
 
 export const Home = () => {
   return (
     <HomeContainer>
-      <Text>Home</Text>
+      <HomeHeader />
     </HomeContainer>
   )
 }

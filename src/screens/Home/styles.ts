@@ -1,3 +1,6 @@
 import styled from 'styled-components/native'
 
-export const HomeContainer = styled.View``
+export const HomeContainer = styled.View`
+  flex: 1;
+  background-color: ${({ theme }) => theme.COLORS.GRAY_800};
+`

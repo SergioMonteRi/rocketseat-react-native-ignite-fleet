@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 
 import { StatusBar } from 'react-native'
+import { AppProvider, UserProvider } from '@realm/react'
 import { ThemeProvider } from 'styled-components/native'
 import {
   useFonts,
@@ -8,11 +9,14 @@ import {
   Roboto_400Regular,
 } from '@expo-google-fonts/roboto'
 
+import { Home } from '@screens/Home'
 import { SignIn } from '@screens/SignIn'
 
 import { Loading } from '@components/Loading'
 
 import theme from '@theme/index'
+
+import { REALM_APP_ID } from '@env'
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold })
@@ -26,14 +30,17 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <StatusBar
-        barStyle={'light-content'}
-        backgroundColor={'transparent'}
-        translucent
-      />
-
-      <SignIn />
-    </ThemeProvider>
+    <AppProvider id={REALM_APP_ID}>
+      <ThemeProvider theme={theme}>
+        <StatusBar
+          barStyle={'light-content'}
+          backgroundColor={'transparent'}
+          translucent
+        />
+        <UserProvider fallback={SignIn}>
+          <Home />
+        </UserProvider>
+      </ThemeProvider>
+    </AppProvider>
   )
 }

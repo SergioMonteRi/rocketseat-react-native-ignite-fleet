@@ -2,13 +2,18 @@ import { Power } from 'phosphor-react-native'
 import { TouchableOpacity } from 'react-native'
 import { useTheme } from 'styled-components/native'
 
-import { Greeting, HomeHeaderContainer, Message, Name } from './styles'
+import { Greeting, HomeHeaderContainer, Message, Name, Picture } from './styles'
 
 export const HomeHeader = () => {
   const { COLORS } = useTheme()
 
   return (
     <HomeHeaderContainer>
+      <Picture
+        source={{ uri: 'https://github.com/sergiomonteri.pngx' }}
+        placeholder="L184iAoffQof00ayfQay~qj[fQj["
+      />
+
       <Greeting>
         <Message>Olá,</Message>
         <Name>Lucas</Name>

@@ -28,8 +28,6 @@ export const SignIn = () => {
 
       const { data } = await GoogleSignin.signIn()
 
-      console.log(data)
-
       if (!data?.idToken) throw new Error('No idToken')
 
       const credentials = Realm.Credentials.jwt(data.idToken)

@@ -1,14 +1,14 @@
 import { Key, Car } from 'phosphor-react-native'
+import { useTheme } from 'styled-components/native'
 
 import { CarStatusContainer, IconBox, Message, TextHighlight } from './styles'
 
 import { CartStausProps } from './types'
-import { useTheme } from 'styled-components/native'
 
 export const CarStaus = (props: CartStausProps) => {
-  const { COLORS } = useTheme()
+  const { licensePlate = null, ...rest } = props
 
-  const { licensePlate = null } = props
+  const { COLORS } = useTheme()
 
   const Icon = licensePlate ? Key : Car
 
@@ -19,7 +19,7 @@ export const CarStaus = (props: CartStausProps) => {
   const status = licensePlate ? 'chegada' : 'saída'
 
   return (
-    <CarStatusContainer>
+    <CarStatusContainer {...rest}>
       <IconBox>
         <Icon size={32} color={COLORS.BRAND_LIGHT} />
       </IconBox>

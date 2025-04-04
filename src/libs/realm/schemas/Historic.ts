@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable camelcase */
 
 import { Realm } from '@realm/react'
@@ -29,7 +30,7 @@ export class Historic extends Realm.Object<Historic> {
     }
   }
 
-  static schema = {
+  static schema: Realm.ObjectSchema = {
     name: 'Historic',
     primaryKey: '_id',
 

@@ -19,6 +19,7 @@
       "@dtos/*": ["./src/dtos/*"],
       "@theme/*": ["./src/theme/*"],
       "@tasks/*": ["./src/tasks/*"],
+      "@libs/*": ["./src/libs/*"],
     }
   }
 }

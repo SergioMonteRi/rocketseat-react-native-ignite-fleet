@@ -13,8 +13,8 @@ export const AppRoutes = () => {
         headerShown: false,
       }}
     >
-      <Screen name="home" component={Home} />
       <Screen name="departure" component={Departure} />
+      <Screen name="home" component={Home} />
       <Screen name="signIn" component={SignIn} />
     </Navigator>
   )

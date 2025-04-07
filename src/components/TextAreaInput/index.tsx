@@ -5,7 +5,7 @@ import { Input, Label, TextAreaInputContainer } from './styles'
 import { LicensePlateInputProps } from './types'
 
 export const TextAreaInput = (props: LicensePlateInputProps) => {
-  const { label, ...rest } = props
+  const { label, inputRef, ...rest } = props
 
   const { COLORS } = useTheme()
 
@@ -14,6 +14,7 @@ export const TextAreaInput = (props: LicensePlateInputProps) => {
       <Label>{label}</Label>
 
       <Input
+        ref={inputRef}
         {...rest}
         autoCapitalize="sentences"
         placeholderTextColor={COLORS.GRAY_400}

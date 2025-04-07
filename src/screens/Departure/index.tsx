@@ -1,4 +1,5 @@
 import { Header } from '@components/Header'
+import { Button } from '@components/Button'
 import { TextAreaInput } from '@components/TextAreaInput'
 import { LicensePlateInput } from '@components/LicensePlateInput'
 
@@ -16,6 +17,8 @@ export const Departure = () => {
           label="Finalidade"
           placeholder="Vou utilizar o veículo para..."
         />
+
+        <Button title="Registrar saída" />
       </Content>
     </DepartureContainer>
   )
